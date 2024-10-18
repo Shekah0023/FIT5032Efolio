@@ -22,7 +22,7 @@
           <!--Display the weather data attribute returned from API
           Example of API data: https://openweathermap.org/current-->  
           <h2>
-              {{ weatherData.name }}, {{ weatherData.sys.country }}
+              {{ weatherData.name }}, {{ weatherData.sys?.country }}
           </h2>
           <div>
             <!--The image source of of the weather icon will be coming from a function called iconUrl
@@ -32,7 +32,7 @@
           </div>
           <!-- weather[0] means the current weather, the way we need to obtain data depends on how
           the API JSON data looks-->
-          <span>{{ weatherData.weather[0].description }}</span>
+          <span>{{ weatherData.weather?.[0]?.description }}</span>
         </div>
       </main>
     </div>
